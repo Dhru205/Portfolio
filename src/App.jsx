@@ -15,10 +15,10 @@ export default function Portfolio() {
   };
 
   const skills = {
-    "Languages": ["Python", "Java", "YAML", "Bash", ".NET", "C"],
-    "DevOps Tools": ["Docker", "Kubernetes", "AWS", "Terraform", "Ansible", "Git"],
+    "Languages": ["Python", "Java", "YAML", "Bash", ".NET", "C#"],
+    "DevOps Tools": ["Docker", "Kubernetes", "Terraform", "Ansible"],
     "Monitoring": ["Grafana", "Prometheus", "Zabbix"],
-    "CI/CD": ["GitLab", "GitHub Actions", "Semgrep", "Bandit", "ESLint"],
+    "CI/CD": ["GitLab", "GitHub Actions", "Jenkins", "ArgoCD"],
     "Servers": ["Apache", "Nginx", "Tomcat", "IIS"],
     "Databases": ["Hadoop", "Redis", "Oracle", "PostgreSQL", "Kafka"]
   };
