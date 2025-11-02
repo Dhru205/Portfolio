@@ -78,7 +78,7 @@ export default function Portfolio() {
         "Optimized architecture for cost-efficiency, keeping monthly expenses under $100",
         "Ensured scalable and reliable infrastructure"
       ],
-      github: "https://github.com/dhru-prajapati/kanban-aws-terraform"
+      github: "https://github.com/Dhru205/kanban-infra-as-code"
     },
     {
       name: "Managed Services for Private Cloud Provider",
@@ -89,8 +89,7 @@ export default function Portfolio() {
         "Automated deployment of 7 big data components (Hadoop, Zookeeper, Spark, HBase, Hive, Flink, Presto) using Ansible",
         "Cut manual setup time by over 80%",
         "Configured PVs, Secrets, and Istio-based remote access"
-      ],
-      github: "https://github.com/dhru-prajapati/managed-services-k8s"
+      ]
     }
   ];
 
