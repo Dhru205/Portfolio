@@ -229,7 +229,7 @@ export default function Portfolio() {
                  className="p-3 bg-slate-800 rounded-lg hover:bg-cyan-600 transition-colors">
                 <Linkedin size={24} />
               </a>
-              <a href="https://github.com/dhru-prajapati" 
+              <a href="https://github.com/Dhru205" 
                  className="p-3 bg-slate-800 rounded-lg hover:bg-cyan-600 transition-colors">
                 <Github size={24} />
               </a>
@@ -413,7 +413,7 @@ export default function Portfolio() {
               <Linkedin size={20} />
               LinkedIn
             </a>
-            <a href="https://github.com/dhru-prajapati" 
+            <a href="https://github.com/Dhru205" 
                className="px-8 py-4 bg-slate-700 hover:bg-slate-600 rounded-lg font-semibold transition-colors flex items-center gap-2">
               <Github size={20} />
               GitHub
