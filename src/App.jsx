@@ -69,7 +69,8 @@ export default function Portfolio() {
         "Implemented full CI/CD automation using GitLab pipelines",
         "Optimized architecture for cost-efficiency, keeping monthly expenses under $100",
         "Ensured scalable and reliable infrastructure"
-      ]
+      ],
+      github: "https://github.com/Dhru205/kanban-infra-as-code"
     },
     {
       name: "Managed Services for Private Cloud Provider",
@@ -85,11 +86,26 @@ export default function Portfolio() {
   ];
 
   const certifications = [
-    "Certified Kubernetes Administrator (CKA)",
-    "AWS Certified Solution Architect",
-    "AWS Certified Cloud Practitioner",
-    "Java For Cloud - Stackroute",
-    "Google Cloud Fundamentals: Core Infrastructure"
+    {
+      name: "Certified Kubernetes Administrator (CKA)",
+      link: "https://www.credly.com/badges/9c7f13ef-1d9c-495e-8476-a7a968acc73b/public_url"
+    },
+    {
+      name: "AWS Certified Solution Architect",
+      link: "https://www.credly.com/badges/f2a8109e-0df3-492d-8fc1-f88cf3da1d11/public_url"
+    },
+    {
+      name: "AWS Certified Cloud Practitioner",
+      link: "https://www.credly.com/badges/dd47c597-c2f7-4b3c-968e-4c92af1b5069/public_url"
+    },
+    {
+      name: "Java For Cloud - Stackroute",
+      link: "https://drive.google.com/file/d/1WmlQRJSze_xVchWy39djhvqwLK_L9qog/view"
+    },
+    {
+      name: "Google Cloud Fundamentals: Core Infrastructure",
+      link: "https://www.coursera.org/account/accomplishments/certificate/Q79TBHXPD2V4"
+    }
   ];
 
   const education = [
@@ -177,6 +193,7 @@ export default function Portfolio() {
         </div>
       </section>
 
+
       {/* Skills Section */}
       <section id="skills" className="py-20 px-6 bg-slate-800/50">
         <div className="max-w-6xl mx-auto">
@@ -252,7 +269,7 @@ export default function Portfolio() {
                   ))}
                 </div>
                 <p className="text-slate-300 mb-4">{project.description}</p>
-                <ul className="space-y-2">
+                <ul className="space-y-2 mb-6">
                   {project.highlights.map((highlight, idx) => (
                     <li key={idx} className="flex gap-3 text-slate-400 text-sm">
                       <span className="text-cyan-400">•</span>
@@ -260,6 +277,17 @@ export default function Portfolio() {
                     </li>
                   ))}
                 </ul>
+                {project.github && (
+                  <a 
+                    href={project.github} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 mt-6 bg-slate-800 hover:bg-cyan-600 text-slate-300 hover:text-white rounded-lg transition-colors"
+                  >
+                    <Github size={20} />
+                    <span>View on GitHub</span>
+                  </a>
+                )}
               </div>
             ))}
           </div>
@@ -296,12 +324,26 @@ export default function Portfolio() {
               </h2>
               <div className="space-y-3">
                 {certifications.map((cert, index) => (
-                  <div key={index} className="bg-slate-800/50 p-4 rounded-lg border border-slate-700 hover:border-cyan-400 transition-colors">
-                    <p className="text-slate-300 flex items-center gap-3">
+                  <a
+                    key={index}
+                    href={cert.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block bg-slate-800/50 p-4 rounded-lg border border-slate-700 hover:border-cyan-400 transition-colors group"
+                  >
+                    <p className="text-slate-300 flex items-center gap-3 group-hover:text-cyan-400 transition-colors">
                       <span className="text-cyan-400">✓</span>
-                      {cert}
+                      <span className="flex-1">{cert.name}</span>
+                      <svg 
+                        className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
                     </p>
-                  </div>
+                  </a>
                 ))}
               </div>
             </div>
