@@ -29,11 +29,10 @@ export default function Portfolio() {
       location: "Chicago, IL",
       achievements: [
         "Develop and maintain OVCAS applications using .NET MVC framework with Oracle database integration and advanced SQL reporting.",
-        "Migrated majority of projects to GitHub organization, establishing centralized version control and improving team collaboration.",
-        "Implemented self-hosted GitHub runners for secure workflow execution, ensuring sensitive data remains within organizational infrastructure.",
+        "Orchestrated migration of majority projects to GitHub organization, establishing centralized version control and improving team collaboration.",
+        "Configured self-hosted GitHub runners for secure workflow execution, ensuring sensitive data remains within organizational infrastructure.",
         "Automated deployment pipelines for 20+ .NET MVC projects to IIS using GitHub Actions, along with .NET Core and Java applications.",
-        "Built custom batch scripts for Java projects that replicate Eclipse build processes, generating WAR files for automated Tomcat deployment."  
-    
+        "Engineered custom batch scripts for Java projects that replicate Eclipse build processes, generating WAR files for automated Tomcat deployment."
       ]
     },
     {
@@ -42,10 +41,15 @@ export default function Portfolio() {
       period: "Dec 2022 - Jul 2025",
       location: "Mumbai, India",
       achievements: [
-        "Implemented centralized monitoring with Prometheus and Grafana, creating dashboards and alerts to improve system reliability.",
-        "Migrated stock broking firm's infrastructure to AWS using Terraform (EKS, RDS, ASGs, ALBs), cutting infrastructure costs by 40%.",
-        "Developed Python scripts to automate AWS resource provisioning, saving clients 50% of their costs.",
-        "Built MonoRepo CI/CD pipeline using GitHub Actions, accelerating release cycles by 60%."
+        "Architected and migrated stock broking firm's infrastructure to AWS using Terraform, provisioning EKS, RDS, ASGs, and ALBs to improve scalability and reduce costs by 40%.",
+        "Orchestrated database deployments (Kafka, Solr, Cassandra, Druid) on Kubernetes using Helm charts and custom operators, integrating with a web application for one-click client-side provisioning with complete backend automation.",
+        "Configured Redis in standalone, master-slave, and sentinel modes; conducted regular failover drills to ensure high availability and seamless disaster recovery.",
+        "Developed Python scripts to optimize AWS resource provisioning and usage patterns, achieving 50% cost savings for client infrastructure.",
+        "Launched Kanban-style task management application on AWS with Terraform-provisioned infrastructure and GitLab CI/CD, maintaining operational costs under $100 per month.",
+        "Established centralized monitoring with Prometheus and Grafana by creating custom dashboards, alerting rules, and SLO tracking to enhance system reliability and observability.",
+        "Integrated DevSecOps practices for Node.js, Python, and Flutter applications by embedding security scanning tools (Semgrep, Bandit, ESLint) into CI/CD pipelines.",
+        "Created automated security pipelines that scan code on every push and generate branch-level vulnerability reports, ensuring secure and compliant code promotion across environments.",
+        "Designed and executed MonoRepo CI/CD pipeline using GitHub Actions, streamlining frontend and backend deployments while accelerating release cycles by 60%."
       ]
     },
     {
@@ -54,8 +58,10 @@ export default function Portfolio() {
       period: "Sep 2022 - Nov 2022",
       location: "Tamil Nadu, India",
       achievements: [
-        "Collaborated with cross-functional teams to understand client requirements and adapt infrastructure configurations.",
-        "Utilized GitHub Actions to automate CI/CD workflows, reducing manual intervention through custom actions for code linting, testing, and deployment."
+        "Collaborated with cross-functional teams to understand client requirements and adapt infrastructure configurations to meet project-specific needs.",
+        "Utilized GitHub Actions to automate CI/CD workflows, reducing manual intervention by 70% through custom actions for code linting, testing, and deployment.",
+        "Configured Docker containerization for multiple microservices applications, improving deployment consistency and reducing environment-related issues by 50%.",
+        "Assisted in implementing monitoring solutions and created documentation for deployment processes, improving team onboarding time and operational knowledge transfer."
       ]
     }
   ];
