@@ -3,20 +3,22 @@ import { Github, Linkedin, Mail, Phone, MapPin, Award, Briefcase, GraduationCap,
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('about');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
       setActiveSection(sectionId);
+      setMobileMenuOpen(false); // Close menu after clicking
     }
   };
 
   const skills = {
-    "Languages": ["Python", "Java", "YAML", "Bash", ".NET", "C#"],
-    "DevOps Tools": ["Docker", "Kubernetes", "Terraform", "Ansible"],
-    "Monitoring": ["Grafana", "Prometheus", "Zabbix", "Elastic Stack"],
-    "CI/CD": ["GitLab", "GitHub Actions", "Jenkins", "ArgoCD"],
+    "Languages": ["Python", "Java", "YAML", "Bash", ".NET", "C"],
+    "DevOps Tools": ["Docker", "Kubernetes", "AWS", "Terraform", "Ansible", "Git"],
+    "Monitoring": ["Grafana", "Prometheus", "Zabbix"],
+    "CI/CD": ["GitLab", "GitHub Actions", "Semgrep", "Bandit", "ESLint"],
     "Servers": ["Apache", "Nginx", "Tomcat", "IIS"],
     "Databases": ["Hadoop", "Redis", "Oracle", "PostgreSQL", "Kafka"]
   };
@@ -76,7 +78,7 @@ export default function Portfolio() {
         "Optimized architecture for cost-efficiency, keeping monthly expenses under $100",
         "Ensured scalable and reliable infrastructure"
       ],
-      github: "https://github.com/Dhru205/kanban-infra-as-code"
+      github: "https://github.com/dhru-prajapati/kanban-aws-terraform"
     },
     {
       name: "Managed Services for Private Cloud Provider",
@@ -87,7 +89,8 @@ export default function Portfolio() {
         "Automated deployment of 7 big data components (Hadoop, Zookeeper, Spark, HBase, Hive, Flink, Presto) using Ansible",
         "Cut manual setup time by over 80%",
         "Configured PVs, Secrets, and Istio-based remote access"
-      ]
+      ],
+      github: "https://github.com/dhru-prajapati/managed-services-k8s"
     }
   ];
 
@@ -138,7 +141,9 @@ export default function Portfolio() {
             <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               DP
             </h1>
-            <div className="flex gap-6">
+            
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex gap-6">
               {['About', 'Skills', 'Experience', 'Projects', 'Education', 'Contact'].map((item) => (
                 <button
                   key={item}
@@ -151,7 +156,42 @@ export default function Portfolio() {
                 </button>
               ))}
             </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden text-slate-300 hover:text-cyan-400 transition-colors"
+            >
+              {mobileMenuOpen ? (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
           </div>
+
+          {/* Mobile Menu */}
+          {mobileMenuOpen && (
+            <div className="md:hidden mt-4 pb-4 space-y-3">
+              {['About', 'Skills', 'Experience', 'Projects', 'Education', 'Contact'].map((item) => (
+                <button
+                  key={item}
+                  onClick={() => scrollToSection(item.toLowerCase())}
+                  className={`block w-full text-left py-2 px-4 rounded-lg transition-colors ${
+                    activeSection === item.toLowerCase() 
+                      ? 'bg-cyan-600 text-white' 
+                      : 'text-slate-300 hover:bg-slate-800 hover:text-cyan-400'
+                  }`}
+                >
+                  {item}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
       </nav>
 
@@ -159,27 +199,27 @@ export default function Portfolio() {
       <section id="about" className="pt-32 pb-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center">
-            <h1 className="text-6xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               Dhru Prajapati
             </h1>
-            <p className="text-2xl text-slate-300 mb-6">DevOps Engineer & Cloud Architect</p>
-            <p className="text-lg text-slate-400 max-w-3xl mx-auto mb-8">
+            <p className="text-xl md:text-2xl text-slate-300 mb-6">DevOps Engineer & Cloud Architect</p>
+            <p className="text-base md:text-lg text-slate-400 max-w-3xl mx-auto mb-8 px-4">
               3+ years of experience in cloud infrastructure, automation, and CI/CD. Passionate about designing scalable 
               and reliable systems that streamline software delivery and enhance developer productivity.
             </p>
             
             {/* Contact Icons */}
-            <div className="flex justify-center gap-6 mb-8">
-              <a href="mailto:dpraj7@uic.edu" className="flex items-center gap-2 text-slate-300 hover:text-cyan-400 transition-colors">
-                <Mail size={20} />
+            <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-8">
+              <a href="mailto:dpraj7@uic.edu" className="flex items-center gap-2 text-slate-300 hover:text-cyan-400 transition-colors text-sm md:text-base">
+                <Mail size={18} />
                 <span>dpraj7@uic.edu</span>
               </a>
-              <a href="tel:+14642665498" className="flex items-center gap-2 text-slate-300 hover:text-cyan-400 transition-colors">
-                <Phone size={20} />
+              <a href="tel:+14642665498" className="flex items-center gap-2 text-slate-300 hover:text-cyan-400 transition-colors text-sm md:text-base">
+                <Phone size={18} />
                 <span>+1 (464) 266-5498</span>
               </a>
-              <span className="flex items-center gap-2 text-slate-300">
-                <MapPin size={20} />
+              <span className="flex items-center gap-2 text-slate-300 text-sm md:text-base">
+                <MapPin size={18} />
                 <span>Chicago, IL</span>
               </span>
             </div>
@@ -190,7 +230,7 @@ export default function Portfolio() {
                  className="p-3 bg-slate-800 rounded-lg hover:bg-cyan-600 transition-colors">
                 <Linkedin size={24} />
               </a>
-              <a href="https://github.com/Dhru205" 
+              <a href="https://github.com/dhru-prajapati" 
                  className="p-3 bg-slate-800 rounded-lg hover:bg-cyan-600 transition-colors">
                 <Github size={24} />
               </a>
@@ -198,7 +238,6 @@ export default function Portfolio() {
           </div>
         </div>
       </section>
-
 
       {/* Skills Section */}
       <section id="skills" className="py-20 px-6 bg-slate-800/50">
@@ -233,14 +272,14 @@ export default function Portfolio() {
           </h2>
           <div className="space-y-8">
             {experience.map((job, index) => (
-              <div key={index} className="bg-slate-800/50 p-8 rounded-lg border border-slate-700 hover:border-cyan-400 transition-all">
-                <div className="flex justify-between items-start mb-4">
+              <div key={index} className="bg-slate-800/50 p-6 md:p-8 rounded-lg border border-slate-700 hover:border-cyan-400 transition-all">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4 gap-2">
                   <div>
-                    <h3 className="text-2xl font-semibold text-cyan-400">{job.role}</h3>
-                    <p className="text-xl text-slate-300">{job.company}</p>
-                    <p className="text-slate-400">{job.location}</p>
+                    <h3 className="text-xl md:text-2xl font-semibold text-cyan-400">{job.role}</h3>
+                    <p className="text-lg md:text-xl text-slate-300">{job.company}</p>
+                    <p className="text-sm md:text-base text-slate-400">{job.location}</p>
                   </div>
-                  <span className="px-4 py-2 bg-slate-900 rounded-lg text-slate-300">{job.period}</span>
+                  <span className="px-4 py-2 bg-slate-900 rounded-lg text-slate-300 text-sm md:text-base self-start">{job.period}</span>
                 </div>
                 <ul className="space-y-3">
                   {job.achievements.map((achievement, idx) => (
@@ -375,7 +414,7 @@ export default function Portfolio() {
               <Linkedin size={20} />
               LinkedIn
             </a>
-            <a href="https://github.com/Dhru205" 
+            <a href="https://github.com/dhru-prajapati" 
                className="px-8 py-4 bg-slate-700 hover:bg-slate-600 rounded-lg font-semibold transition-colors flex items-center gap-2">
               <Github size={20} />
               GitHub
