@@ -17,7 +17,7 @@ export default function Portfolio() {
   const skills = {
     "Languages": ["Python", "Java", "YAML", "Bash", ".NET", "C#"],
     "DevOps Tools": ["Docker", "Kubernetes", "Terraform", "Ansible"],
-    "Monitoring": ["Grafana", "Prometheus", "Zabbix"],
+    "Monitoring": ["Grafana", "Prometheus", "Zabbix", "ELK Stack"],
     "CI/CD": ["GitLab", "GitHub Actions", "Jenkins", "ArgoCD"],
     "Servers": ["Apache", "Nginx", "Tomcat", "IIS"],
     "Databases": ["Hadoop", "Redis", "Oracle", "PostgreSQL", "Kafka"]
@@ -30,7 +30,7 @@ export default function Portfolio() {
       period: "Aug 2025 - Current",
       location: "Chicago, IL",
       achievements: [
-        "Develop and maintain OVCAS applications using .NET MVC framework with Oracle database integration and advanced SQL reporting.",
+        "Developed and maintained OVCAS applications using .NET MVC framework with Oracle database integration and advanced SQL reporting.",
         "Orchestrated migration of majority projects to GitHub organization, establishing centralized version control and improving team collaboration.",
         "Configured self-hosted GitHub runners for secure workflow execution, ensuring sensitive data remains within organizational infrastructure.",
         "Automated deployment pipelines for 20+ .NET MVC projects to IIS using GitHub Actions, along with .NET Core and Java applications.",
