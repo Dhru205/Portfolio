@@ -33,8 +33,9 @@ export default function Portfolio() {
         "Developed and maintained OVCAS applications using .NET MVC framework with Oracle database integration and advanced SQL reporting.",
         "Orchestrated migration of majority projects to GitHub organization, establishing centralized version control and improving team collaboration.",
         "Configured self-hosted GitHub runners for secure workflow execution, ensuring sensitive data remains within organizational infrastructure.",
-        "Automated deployment pipelines for 20+ .NET MVC projects to IIS using GitHub Actions, along with .NET Core and Java applications.",
-        "Engineered custom batch scripts for Java projects that replicate Eclipse build processes, generating WAR files for automated Tomcat deployment."
+        "Automated CI/CD deployment pipelines (GitHub Actions) for 20+ applications deploying .NET MVC projects to IIS and supporting .NET Core and Java apps with Telegram group notifications that automatically post workflow status (success/failure) to reduce manual checks and speed up response time.",
+        "Led modernization efforts by migrating legacy .NET Framework MVC (4.8) applications to .NET 8 (Core), leveraging AI agents for accelerated delivery while also performing manual migrations to build deeper understanding of the process.",
+        "Implemented Telegram-based alerting for a governance-critical email delivery application, providing real-time failure notifications with error details and eliminating the need for manual database checks to identify missed emails."
       ]
     },
     {
