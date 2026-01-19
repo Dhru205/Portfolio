@@ -426,7 +426,7 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className="py-8 px-6 border-t border-slate-700">
         <div className="max-w-6xl mx-auto text-center text-slate-400">
-          <p>© 2025 Dhru Prajapati. Built with React and Tailwind CSS.</p>
+          <p>© {new Date().getFullYear()} Dhru Prajapati. Built with React and Tailwind CSS.</p>
         </div>
       </footer>
     </div>
