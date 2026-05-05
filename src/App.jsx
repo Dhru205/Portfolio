@@ -45,7 +45,7 @@ export default function Portfolio() {
         "Architected and migrated stock broking firm's infrastructure to AWS using Terraform, provisioning EKS, RDS, ASGs, and ALBs to improve scalability and reduce costs by 40%.",
         "Orchestrated database deployments (Kafka, Solr, Cassandra, Druid) on Kubernetes using Helm charts and custom operators, integrating with a web application for one-click client-side provisioning with complete backend automation.",
         "Configured Redis in standalone, master-slave, and sentinel modes; conducted regular failover drills to ensure high availability and seamless disaster recovery.",
-        "Developed Python scripts to optimize AWS resource provisioning and usage patterns, achieving 50% cost savings for client infrastructure.",
+        "Developed Python scripts to extract and analyze resource information across specific AWS services in client accounts, helping clients understand usage patterns and identify cost-optimization opportunities.",
         "Launched Kanban-style task management application on AWS with Terraform-provisioned infrastructure and GitLab CI/CD, maintaining operational costs under $100 per month.",
         "Established centralized monitoring with Prometheus and Grafana by creating custom dashboards, alerting rules, and SLO tracking to enhance system reliability and observability.",
         "Integrated DevSecOps practices for Node.js, Python, and Flutter applications by embedding security scanning tools (Semgrep, Bandit, ESLint) into CI/CD pipelines.",
