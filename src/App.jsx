@@ -32,7 +32,7 @@ export default function Portfolio() {
       achievements: [
         "Developed and maintained OVCAS applications using .NET MVC framework with Oracle database integration and advanced SQL reporting.",
         "Automated CI/CD deployment pipelines (GitHub Actions) for 30+ applications deploying .NET MVC projects to IIS and supporting .NET Core and Java apps with Telegram group notifications that automatically post workflow status (success/failure) to reduce manual checks and speed up response time.",
-        "Engineered observability across 30+ applications with OpenTelemetry, Prometheus, Grafana, and Blackbox Exporter for uptime and health monitoring"
+        "Engineered observability across 30+ applications with OpenTelemetry, Prometheus, Grafana, and Blackbox Exporter for uptime and health monitoring",
         "Led modernization efforts by migrating legacy .NET Framework MVC (4.8) applications to .NET 8 (Core), leveraging AI agents for accelerated delivery while also performing manual migrations to build deeper understanding of the process.",
         "Implemented Telegram-based alerting for a governance-critical email delivery application, providing real-time failure notifications with error details and eliminating the need for manual database checks to identify missed emails."
       ]
